@@ -1,0 +1,7 @@
+<p>are there any new features that you would like to see in this app you can write them down and post it on this page</p>
+<textarea rows="10" cols="100" [(ngModel)]="text"></textarea>
+<button type="button" (click)="postFeature(text)">post</button>
+<ul>
+  <li *ngFor="let feature of features">{{feature}}</li>
+</ul>
+<button type="button" (click)="refresh()">refresh</button>

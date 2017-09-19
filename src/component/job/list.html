@@ -1,0 +1,29 @@
+<div class="job-list" id="job-list">
+
+
+    <div class="job" *ngFor="let job of jobs">
+
+    <a href="/jobs/{{ job._id }}" target="_blank" rel="noopener">
+
+    <h3 class="job-position">
+      {{ job.position }}
+    </h3>
+
+    <div class="job-company">
+      {{ job.company }}
+    </div>
+
+    <div class="job-location">
+      {{ job.location }}
+    </div>
+
+    <ul class="job-skills" >
+      <li *ngFor="let skill of job.skills">{{skill}}</li>
+    </ul>
+    <button type="button" (click)="saveJob(job)">save this job</button>
+
+  </a>
+
+</div>
+</div>
+<button type="button" (click)="updateJobs()">refresh</button>
